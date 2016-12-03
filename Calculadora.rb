@@ -41,8 +41,9 @@ loop do
     lectura
     division($a, $b)
   when '**'
+    lectura
     potencia($a, $b)
-  when 'sqrt'    
+  when 'sqrt'
     raiz($a)
   else
     "Por favor escoja otra opción válida."
