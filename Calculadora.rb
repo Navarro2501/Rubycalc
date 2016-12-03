@@ -19,10 +19,13 @@ end
 def potencia(a,b)
   puts a**b
 end
+def raiz(a)
+  puts Math.sqrt(a)
+end
 loop do
   puts "Escriba el primer número:"
   $a=gets.to_f
-  puts "Operando: "
+  puts "Operando (teclee sqrt para raíz cuadrada): "
   op=gets.chomp
   puts case op
   when '+'
@@ -38,8 +41,9 @@ loop do
     lectura
     division($a, $b)
   when '**'
-    lectura
     potencia($a, $b)
+  when 'sqrt'    
+    raiz($a)
   else
     "Por favor escoja otra opción válida."
   end
