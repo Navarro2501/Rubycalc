@@ -5,23 +5,25 @@ def lectura
   return $b
 end
 def suma(a, b)
-  puts a+b
+  $arreglo.push(a+b)
 end
 def resta(a, b)
-  puts a-b
+  $arreglo.push(a-b)
 end
 def multiplicacion(a, b)
-  puts a*b
+  $arreglo.push(a*b)
 end
 def division(a,b)
-  puts a/b
+  $arreglo.push(a/b)
 end
 def potencia(a,b)
-  puts a**b
+  arreglo.push(a**b)
 end
 def raiz(a)
-  puts Math.sqrt(a)
+  arreglo.push(Math.sqrt(a))
 end
+$ac=0
+$arreglo=[0]
 loop do
   puts "Escriba el primer número:"
   $a=gets.to_f
@@ -48,7 +50,14 @@ loop do
   else
     "Por favor escoja otra opción válida."
   end
-  puts "Si quiere hacer otra operación, oprima 1. En caso contrario oprima 0."
+  puts "Para ver el historial de resultados, escriba 2. Si quiere hacer otra operación, oprima 1. En caso contrario oprima 0."
   x=gets.to_i
+  if x==2
+    for y in $arreglo
+      puts y
+    end
+  else
+    break
+  end
   break if x==0
 end
